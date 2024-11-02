@@ -16,7 +16,7 @@ function pesquisa_binaria(lista, item) {
     while (baixo <= alto) {
         // A variável meio servirá para referenciar ao meio de nossa lista, para isso, faremos uma expressão somando baixo + alto e dividir por 2, resultado na metade, porém, em alguns casos o resultado dessa expressão serão números ímpares, dando um número decimal, coisa que não queremos aqui, por conta dos índices serem números inteiros. Por isso foi adicionado a função Math.floor para arrendondar para um número inteiro.
         const meio = Math.floor((baixo + alto) / 2);
-        //A variável chute referencia ao nosso "palpite" e com essa variável será possível realizar algumas condicionais para encontrar nosso resultado.
+        //A variável chute referencia ao nosso índice "central" do array e com essa variável será possível realizar algumas condicionais para encontrar nosso resultado.
         const chute = lista[meio];
 
         // A estutura condicional será responsável por comparar a variável chute com o nosso item. Se forem valores iguais o nosso resultado sairá.
