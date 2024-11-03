@@ -10,6 +10,9 @@ const listaArtistas = [
     { nome: "Kanye West", plays: 562 },
     { nome: "Baco Exu do Blues", plays: 1555 },
     { nome: "Travis Scott", plays: 994 },
+    { nome: "Don Toliver", plays: 259 },
+    { nome: "Tyler, The Creator", plays: 430 },
+    { nome: "Brent Faiyaz", plays: 295 },
     { nome: "Frank Ocean", plays: 672 }
 ];
 
@@ -40,6 +43,8 @@ function ordenacaoPorSelecao(array){
 
 const artistasOrdenados = ordenacaoPorSelecao(listaArtistas);
 console.log('Esses são os 7 primeiros artistas que você mais escuta:')
+i = 1;
 for (const artistas of artistasOrdenados) {
-    console.log(`O artista ${artistas.nome} tem ${artistas.plays} plays.`);
+    console.log(`${artistas.nome} é o artista Top ${i} e tem ${artistas.plays} plays.`);
+    i++;
 }

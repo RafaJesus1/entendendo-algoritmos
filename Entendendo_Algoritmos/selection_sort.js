@@ -30,14 +30,14 @@ function buscaMenor(array) {
 //Nessa função será responsável por ordernar os valores que a função BuscaMenor estabelece. Será necessário criar um novo array para fazer a inserção desses itens. Será utilizado uma lista auxiliar também chamada copyArray que será responsável por recortar e copiar para o novoArray os valores menores, sendo assim, ordenando-os.
 function ordenacaoPorSelecao(array){
     //Novo array para ordenar os valores
-    var novoArray = [];
+    let novoArray = [];
     //Cria uma copia do array
-    var copyArray = array.slice();
+    let copyArray = array.slice();
     //Pega o tamanho do array
-    var length = array.length;
+    let length = array.length;
     //Esse laço será responsável por buscar um valor menor dentro do copyArray, assim que essa linha for executada, novoArray fará um push nesse menor indice trazendo uma ordenação nesse novoArray; Detalhe sobre a função splice, que é possível ter dois parâmetros, o primeiro valor será o menor índice e o segundo valor "1" será a quantidade de elementos que queremos recortar e passar para o novoArray
     for (var i = 0; i < length; i++) {
-        var menor_indice = buscaMenor(copyArray);
+        menor_indice = buscaMenor(copyArray);
         novoArray.push(copyArray.splice(menor_indice, 1)[0]);
     }
 
@@ -48,5 +48,5 @@ function ordenacaoPorSelecao(array){
 const sourceArray = [5, 3, 6, 2, 10];
 const sortedArray = ordenacaoPorSelecao(sourceArray);
 
-console.log("Source array - ", sourceArray); // [5, 3, 6, 2, 10]
-console.log("New sorted array - ", sortedArray); // [2, 3, 5, 6, 10]
+console.log("Lista desordenada - ", sourceArray); // [5, 3, 6, 2, 10]
+console.log("Lista ordenada - ", sortedArray); // [2, 3, 5, 6, 10]
