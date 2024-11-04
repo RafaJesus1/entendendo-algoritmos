@@ -45,6 +45,6 @@ const artistasOrdenados = ordenacaoPorSelecao(listaArtistas);
 console.log('Esses são os 7 primeiros artistas que você mais escuta:')
 i = 1;
 for (const artistas of artistasOrdenados) {
-    console.log(`${artistas.nome} é o artista Top ${i} e tem ${artistas.plays} plays.`);
+    console.log(`${artistas.nome} é o artista Top ${i} e tem ${artistas.plays} plays no seu LastFM.`);
     i++;
 }
