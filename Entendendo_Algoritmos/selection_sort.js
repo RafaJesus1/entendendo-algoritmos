@@ -3,7 +3,7 @@
 
 // Ordenação por Seleção é responsável por ordernar uma lista desordenada.
 // No capítulo desse algoritmo é apresentado como funciona os arrays e listas desencadeadas, mostrandos suas funcionalidades, prós e contras.
-// Arrays são ótimos para acessar elementos aleatórios, porém, na parte de inserir elementos pode haver algumas dificuldades por conta de armazenamentos na memória do computador, se na "quarta gaveta" estiver sido usada, e você quer inserir um novo elemento, será necessário mover todos os elementos anteriores para um lugar mais adequado e que caiba.
+// Arrays são ótimos para acessar elementos aleatórios e leituras rápidas, porém, na parte de inserir elementos pode haver algumas dificuldades por conta de armazenamentos na memória do computador, se na "quarta gaveta" estiver sido usada, e você quer inserir um novo elemento, será necessário mover todos os elementos anteriores para um lugar mais adequado e que caiba.
 // As listas encadeadas não sofrem desse problema de inserção ou deleção, por conta de cada elemento é referenciado a um endereço na memória, porém, em alguns acessos aleatórios não são fáceis de lidar, é necessário percorrer toda lista, desde o primeiro item, que irá referenciar o endereço do próximo elemento, assim sucessivamente. 
 
 
@@ -37,7 +37,9 @@ function ordenacaoPorSelecao(array){
     let length = array.length;
     //Esse laço será responsável por buscar um valor menor dentro do copyArray, assim que essa linha for executada, novoArray fará um push nesse menor indice trazendo uma ordenação nesse novoArray; Detalhe sobre a função splice, que é possível ter dois parâmetros, o primeiro valor será o menor índice e o segundo valor "1" será a quantidade de elementos que queremos recortar e passar para o novoArray
     for (var i = 0; i < length; i++) {
+        //Busca o menor valor no copyArray
         menor_indice = buscaMenor(copyArray);
+        //A função push servirá para adicionar o menor índice ao novoArray com os elementos ordenados
         novoArray.push(copyArray.splice(menor_indice, 1)[0]);
     }
 
